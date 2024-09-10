@@ -1,0 +1,122 @@
+[
+        {
+          "name": "Wireless Earbuds",
+          "description": "High-quality wireless earbuds with noise-canceling features.",
+          "category": "Electronics",
+          "price": 79.99
+        },
+        {
+          "name": "Smartwatch",
+          "description": "Water-resistant smartwatch with health monitoring and GPS.",
+          "category": "Electronics",
+          "price": 129.99
+        },
+        {
+          "name": "4K Ultra HD TV",
+          "description": "55-inch 4K Ultra HD TV with HDR and smart features.",
+          "category": "Electronics",
+          "price": 499.99
+        },
+        {
+          "name": "Bluetooth Speaker",
+          "description": "Portable Bluetooth speaker with deep bass and 12-hour playtime.",
+          "category": "Electronics",
+          "price": 49.99
+        },
+        {
+          "name": "Gaming Laptop",
+          "description": "High-performance gaming laptop with 16GB RAM and RTX 3060 GPU.",
+          "category": "Computers",
+          "price": 1499.99
+        },
+        {
+          "name": "Mechanical Keyboard",
+          "description": "RGB backlit mechanical keyboard with customizable keys.",
+          "category": "Computers",
+          "price": 89.99
+        },
+        {
+          "name": "Office Chair",
+          "description": "Ergonomic office chair with lumbar support and adjustable height.",
+          "category": "Furniture",
+          "price": 199.99
+        },
+        {
+          "name": "Standing Desk",
+          "description": "Height-adjustable standing desk with a spacious tabletop.",
+          "category": "Furniture",
+          "price": 299.99
+        },
+        {
+          "name": "Smart Refrigerator",
+          "description": "Wi-Fi enabled refrigerator with touch screen and voice control.",
+          "category": "Home Appliances",
+          "price": 1499.99
+        },
+        {
+          "name": "Air Fryer",
+          "description": "Compact air fryer with 7 preset cooking functions.",
+          "category": "Home Appliances",
+          "price": 69.99
+        },
+        {
+          "name": "Running Shoes",
+          "description": "Lightweight and breathable running shoes with cushioned soles.",
+          "category": "Footwear",
+          "price": 89.99
+        },
+        {
+          "name": "Leather Wallet",
+          "description": "Genuine leather wallet with RFID blocking technology.",
+          "category": "Accessories",
+          "price": 39.99
+        },
+        {
+          "name": "Digital Camera",
+          "description": "Mirrorless digital camera with 24MP sensor and 4K video recording.",
+          "category": "Photography",
+          "price": 899.99
+        },
+        {
+          "name": "Noise-Cancelling Headphones",
+          "description": "Over-ear noise-cancelling headphones with 30-hour battery life.",
+          "category": "Electronics",
+          "price": 199.99
+        },
+        {
+          "name": "Electric Toothbrush",
+          "description": "Rechargeable electric toothbrush with pressure sensor and multiple brushing modes.",
+          "category": "Personal Care",
+          "price": 49.99
+        },
+        {
+          "name": "Yoga Mat",
+          "description": "Eco-friendly yoga mat with non-slip surface and extra thickness.",
+          "category": "Sports",
+          "price": 29.99
+        },
+        {
+          "name": "Camping Tent",
+          "description": "4-person waterproof camping tent with easy setup.",
+          "category": "Outdoor",
+          "price": 129.99
+        },
+        {
+          "name": "Espresso Machine",
+          "description": "Automatic espresso machine with milk frother and programmable settings.",
+          "category": "Home Appliances",
+          "price": 299.99
+        },
+        {
+          "name": "Smartphone",
+          "description": "Latest model smartphone with 128GB storage and advanced camera system.",
+          "category": "Electronics",
+          "price": 999.99
+        },
+        {
+          "name": "Electric Scooter",
+          "description": "Foldable electric scooter with a top speed of 15 mph and a range of 15 miles.",
+          "category": "Transportation",
+          "price": 399.99
+        }
+]
