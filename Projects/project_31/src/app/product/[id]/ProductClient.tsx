@@ -5,6 +5,7 @@ import { Product } from '@/types/Product';
 import { useCart } from '@/context/CartContext';
 import BackButton from './BackButton';
 import AddToCart from './AddToCart';
+import ReviewRating from './ReviewRating';
 // List of forbidden words
 const forbiddenWords = ['spam', 'fake', 'offensive'];
 
@@ -110,22 +111,9 @@ const ProductClient: React.FC<ProductClientProps> = ({ product }) => {
         {/* Error Message */}
         {error && <p className="text-red-500">{error}</p>}
 
-        {/* Display Reviews and Ratings */}
-        <div>
-          <h3 className="text-lg font-semibold mb-2">Reviews:</h3>
-          {newReviews.length > 0 ? (
-            newReviews.map((entry, index) => (
-              <li key={index} className="mb-2 border-b pb-2">
-                <h1>Rating: {entry.rating}</h1>
-                <p>Comment: {entry.review}</p>
-              </li>
-            ))
-          ) : (
-            <p>No reviews yet.</p>
-          )}
-        </div>
+        <ReviewRating newReviews={newReviews}/>
 
-          <AddToCart product={product}/>
+        <AddToCart product={product}/>
 
         {/* Back Button */}
         <BackButton/>
