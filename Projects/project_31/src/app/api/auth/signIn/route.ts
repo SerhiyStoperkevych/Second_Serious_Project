@@ -4,13 +4,14 @@ import User from '@/models/User';
 
 export async function POST(request: Request) {
   await connectDb();
-  const { email, password } = await request.json();
-
-  if (!email || !password) {
-    return NextResponse.json({ message: 'Email and password are required' }, { status: 400 });
-  }
 
   try {
+    const { email, password } = await request.json();
+
+    if (!email || !password) {
+      return NextResponse.json({ message: 'Email and password are required' }, { status: 400 });
+    }
+
     const user = await User.findOne({ email });
     if (!user || user.password !== password) {
       return NextResponse.json({ message: 'Invalid email or password' }, { status: 400 });
@@ -18,7 +19,8 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ message: 'User signed in successfully', user: { email } });
   } catch (error) {
-    return NextResponse.json({ message: 'Error signing in', error }, { status: 500 });
+    console.error('Error signing in:', (error as Error).message);
+    return NextResponse.json({ message: 'Error signing in', error: (error as Error).message }, { status: 500 });
   }
 }
 

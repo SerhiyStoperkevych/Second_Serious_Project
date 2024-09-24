@@ -1,17 +1,15 @@
-import React from 'react'
+import React from 'react';
 import Link from 'next/link';
 
-const BackButton = () => {
-  return (
-    <div>
-      <Link href="/cart" className="mt-4 inline-block bg-gray-500 text-white py-2 px-4 rounded-lg hover:bg-gray-600">
-        To the Cart
+const BackButton = () => (
+  <div>
+    <Link href="/cart" className="mt-4 inline-block bg-gray-500 text-white py-2 px-4 rounded-lg hover:bg-gray-600">
+      To the Cart
     </Link>
     <Link href="/products" className="mt-4 inline-block bg-gray-500 text-white py-2 px-4 rounded-lg hover:bg-gray-600">
-        To the Products
+      To the Products
     </Link>
-    </div>
-  )
-}
+  </div>
+);
 
 export default BackButton;

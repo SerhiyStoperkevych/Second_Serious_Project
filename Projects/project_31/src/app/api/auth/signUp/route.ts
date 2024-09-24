@@ -4,26 +4,26 @@ import User from '@/models/User';
 
 export async function POST(request: Request) {
   await connectDb();
-  const { email, password } = await request.json();
-
-  if (!email || !password) {
-    return NextResponse.json({ message: 'Email and password are required' }, { status: 400 });
-  }
 
   try {
-    // Check if user already exists
+    const { email, password } = await request.json();
+
+    if (!email || !password) {
+      return NextResponse.json({ message: 'Email and password are required' }, { status: 400 });
+    }
+
     const existingUser = await User.findOne({ email });
     if (existingUser) {
       return NextResponse.json({ message: 'User already exists' }, { status: 400 });
     }
 
-    // Create a new user
     const newUser = new User({ email, password });
     await newUser.save();
 
     return NextResponse.json({ message: 'User signed up successfully', user: { email } }, { status: 201 });
   } catch (error) {
-    return NextResponse.json({ message: 'Error signing up', error }, { status: 500 });
+    console.error('Error signing up:', (error as Error).message);
+    return NextResponse.json({ message: 'Error signing up', error: (error as Error).message }, { status: 500 });
   }
 }
 

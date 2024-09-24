@@ -1,4 +1,3 @@
-// /app/product/[id]/page.tsx
 import ProductModel from '@/models/Product';
 import connectDb from '@/lib/mongodb';
 import React from 'react';
@@ -6,18 +5,19 @@ import { notFound } from 'next/navigation';
 import ProductClient from './ProductClient';
 import { Product } from '@/types/Product';
 
-const ProductPage = async ({ params }: { params: { id: string } }) => {
-  await connectDb(); // Connect to the database
-  const productDoc = await ProductModel.findById(params.id).lean().exec();
+interface ProductPageProps {
+  params: { id: string };
+}
 
-  if (!productDoc) {
-    return notFound(); // Return 404 if the product is not found
+const ProductPage: React.FC<ProductPageProps> = async ({ params }) => {
+  await connectDb();
+  const product = await ProductModel.findById(params.id);
+
+  if (!product) {
+    return notFound();
   }
 
-  // Type assertion to ensure productDoc matches Product type
-  const product = productDoc as Product;
-
-  return <ProductClient product={product} />;
+  return <ProductClient product={product as unknown as Product} />;
 };
 
 export default ProductPage;
