@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",                 // Specify ECMAScript target version
+    "module": "CommonJS",               // Specify module code generation
+    "outDir": "./dist",                 // Redirect output structure to the 'dist' directory
+    "rootDir": "./src",                 // Specify the root directory of input files
+    "typeRoots": ["./node_modules/@types", "./types"], // Specify where to find type definitions
+    "strict": true,                      // Enable all strict type-checking options
+    "esModuleInterop": true,             // Enables emit interoperability between CommonJS and ES Modules
+    "skipLibCheck": true,               // Skip type checking of declaration files
+    "allowJs": false                     // Set to true only if you have JavaScript files
+  },
+  "include": ["src/**/*", "src/@types/express-session.d.ts"],            // Include all TypeScript files in the src directory
+  "exclude": ["node_modules"]            // Exclude the node_modules directory
+}
